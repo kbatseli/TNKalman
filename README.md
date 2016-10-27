@@ -58,7 +58,7 @@ Simulates a MIMO Volterra system *TN*  in the Tensor Network format with a given
 
 * c=squareTN(a,b)
 
-Computes the Tensor Network $c$ of the column-wise outer product of the two matrices $a$ and $b$ in the Tensor Network format.
+Computes the Tensor Network *c* of the column-wise outer product of the two matrices *a* and *b* in the Tensor Network format.
 
 * a=squeeze(a)
 
@@ -74,4 +74,6 @@ Small demo that illustrates how to use the TN Kalman filter for recursive system
 
 "A Tensor Network Kalman filter with an application in recursive MIMO Volterra system identification"
 
-Authors: Kim Batselier, Ngai Wong
+https://arxiv.org/abs/1610.05434
+
+Authors: Kim Batselier, Zhongming Chen, Ngai Wong
