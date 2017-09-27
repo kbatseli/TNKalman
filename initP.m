@@ -23,9 +23,9 @@ function P=initP(sigmas,n,d)
 % auxiliary, number outputs, rows, columns, auxiliary
 
 k=length(sigmas);
-P.n=[ones(d,1) [k;ones(d-1,1)] n*ones(d,2)  ones(d,1)];
+P.n=[ones(d,1) n*ones(d,2) [k;ones(d-1,1)] ones(d,1)];
 for i=1:k
-	P.core{1}(i,:,:)=sigmas(i)*eye(n);
+	P.core{1}(:,:,i)=sigmas(i)*eye(n);
 for i=2:d
 	P.core{i}=eye(n);
 end

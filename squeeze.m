@@ -23,7 +23,7 @@ a.n(:,[false I false])=[];
 % column index, so we need to artificially add it
 if size(a.n,2)==3           
     % dealing with a vector but need to ones for consistency
-    a.n=[a.n(:,1) ones(d,1) a.n(:,2:end)];
+    a.n=[a.n(:,1:2) ones(d,1) a.n(:,end)];
 end
 for i=1:d
     a.core{i}=reshape(a.core{i},a.n(i,:));

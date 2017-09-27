@@ -19,7 +19,7 @@ function m=initm(l,n,d)
 % we assume the following ordering of the dimensions
 % auxiliary, number outputs, rows, auxiliary
 
-m.n=[ones(d,1) [l;ones(d-1,1)] n*ones(d,1) ones(d,1)];
+m.n=[ones(d,1) n*ones(d,1) [l;ones(d-1,1)] ones(d,1)];
 m.core{1}=zeros(1,n,l);
 for i=2:d
 	m.core{i}=zeros(1,n,1);
