@@ -33,11 +33,10 @@ for i=1:da
     temp=tempa*tempb;
     newsize=[a.n(i,Ia(1:end-1)) b.n(i,Ib(2:end))];
     temp=reshape(temp,newsize);    
-    temp=permute(temp,[1 na 2:k(1)-1 na+1:na+nb-3 k(1):na-1 na+nb-2]);
-    newsize=newsize([1 na 2:k(1)-1 na+1:na+nb-3 k(1):na-1 na+nb-2]);
+    temp=permute(temp,[1,na,2:na-2,na+1:na+nb-3,na-1,na+nb-2]);
+%     temp=permute(temp,[1 na 2:na-2 na+1:na+nb-2 na-1]);
+    newsize=newsize([1 na 2:na-2 na+1:na+nb-2 na-1]);
     c.core{i}=reshape(temp,[newsize(1)*newsize(2),(newsize(3:end-2)),newsize(end-1)*newsize(end)]);
     c.n(i,:)=[newsize(1)*newsize(2),newsize(3:end-2),newsize(end-1)*newsize(end)];
 end
-
-
 end
